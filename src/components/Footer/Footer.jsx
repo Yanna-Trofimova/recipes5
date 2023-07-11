@@ -9,6 +9,7 @@ import {
   IconContainer,
   FooterButton,
   Form,
+  ContainerSvg,
   Input,
   NavLinkItem,
   LinkStyle,
@@ -16,12 +17,19 @@ import {
   FooterLogoText,
   FooterLogoContainer,
   LogoWrapper,
+  TextContainer,
+  OptionsList,
+  OptionsItem,
+  SubscribeContainer,
+  SubscribeTitle,
+  SubscribeText,
+  MainContainer
+
 } from './Footer.styled';
 
 import {
   FooterLogo,
   FooterEmailLogo,
-  FooterFacebookLogo,
   FooterYoutubeLogo,
   FooterTwitterLogo,
   FooterInstagramLogo,
@@ -38,9 +46,20 @@ const Footer = () => {
 
           <FooterLogoText>So Yummy</FooterLogoText>
         </FooterLogoContainer>
+
+        
+  <MainContainer>
+   <TextContainer>
+        <OptionsList>
+            <OptionsItem>Database of recipes that can be replenished </OptionsItem>
+            <OptionsItem>Flexible search for desired and unwanted ingredients</OptionsItem>
+            <OptionsItem>Ability to add your own recipes with photos</OptionsItem>
+            <OptionsItem>Convenient and easy to use</OptionsItem>
+         </OptionsList>
+
         <NavLinkList>
           <NavLinkItem>
-            <LinkStyle to={'/categories/:categoryName'}>Categories</LinkStyle>
+            <LinkStyle to={'/categories/:categoryName'}>Ingredients</LinkStyle>
           </NavLinkItem>
           <NavLinkItem>
             <LinkStyle to={'/add'}>Add recipes</LinkStyle>
@@ -56,10 +75,26 @@ const Footer = () => {
           </NavLinkItem>
         </NavLinkList>
 
-        <Form action="subscribe">
-          <Input type="email" placeholder="Enter your email address" />
-          <FooterButton type="submit">Subscribe</FooterButton>
-        </Form>
+        </TextContainer>
+
+        <SubscribeContainer>
+          <SubscribeTitle>Subscribe to our Newsletter</SubscribeTitle>
+           <SubscribeText>
+            Subscribe up to our newsletter. Be in touch with latest news and special
+            offers, etc.
+          </SubscribeText>
+
+
+
+          <Form action="subscribe">
+            <ContainerSvg>
+                <FooterEmailLogo/> </ContainerSvg>
+                <Input type="email" placeholder="Enter your email address" />
+            
+            <FooterButton type="submit">Subscribe</FooterButton>
+          </Form>
+          </SubscribeContainer>
+        </MainContainer>
         <IconContainer>
           <LinkSocial href="https://www.facebook.com/">
             <FooterFacebookLogoStyled />
@@ -73,7 +108,8 @@ const Footer = () => {
           <LinkSocial href="https://www.instagram.com/">
             <FooterInstagramLogo />
           </LinkSocial>
-        </IconContainer>
+          </IconContainer>
+       
       </FooterInfo>
       <BottomFooter>
         <Copyright>© 2023 All Rights Reserved.</Copyright>
