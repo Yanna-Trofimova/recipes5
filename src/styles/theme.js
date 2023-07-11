@@ -124,6 +124,7 @@ export const lightTheme = {
         fill: '#8BAA36',
         text: '#FAFAFA',
         hoverFill: '#D9D9D9',
+        background: '#1E1F28',
       },
       iconsList: {
         color: '#8BAA36',
